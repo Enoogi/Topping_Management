@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaPal - Toppings Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="btn btn-light toggle-sidebar" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img src="img/logotext.svg">    
+        </div>
+        <div class="nav-item">Dashboard</div>
+        <div class="nav-item">Report</div>
+        <div class="nav-item active">Inventory</div>
+        <div class="nav-item">Sales</div>
+        <div class="nav-item">Messages</div>
+        <div class="nav-item">Settings</div>
+    </div>
+
+    <div class="d-flex flex-row-reverse">
+        <div class="user-info d-flex align-items-center gap-3 mb-4">
+            <div class="user-avatar">
+                <img src="img/owner.png" alt="User Avatar">
+            </div>
+            <div>
+                <div class="fw-bold">StrongMind</div>
+                <div class="text-muted">Admin</div>
+            </div>
+        </div>
+    </div>
+    <hr class="line">
+    <div class="main-wrapper">
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row mb-8">
+                        <div class="col-md-2 mb-2">
+                            <h3>Toppings</h3>
+                        </div>
+                        <div class="col-md-2 mb-2">
+                            <select class="form-select">
+                                <option>Category</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 mb-2">
+                            <select class="form-select">
+                                <option>Brand</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-2">
+                            <input type="search" class="form-control" placeholder="Search...">
+                        </div>
+                        
+                        <div class="col-md-2 mb-1">
+                            <button class="btn btn-success">
+                                <span><i class="fa-solid fa-plus"></i> Add Item</span>
+                            </button>
+                            
+                        </div>
+                        <div class="col-md-1 mb-1">
+                            <button class="btn btn-light">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mb-8">
+                        <div class="col-md-3 mb-1">
+                            <select class="form-select">
+                                <option value="option1">In Stock</option>
+                                <option value="option2">Out of Stock</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <th>Item</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th><i class="fa fa-plus" aria-hidden="true"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="quickadd">
+                                    <td colspan="6">
+                                        <button class="btn btn-light">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>   
+                                    </td>                         
+                                </tr>  
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>
+                                        <div class=" gap-2">
+                                            <img src="img/pepperoni.png" alt="Pepperoni" class="item-image">
+                                            <span>Pepperoni</span>
+                                        </div>
+                                    </td>
+                                    <td>Meat</td>
+                                    <td>$0.00</td>
+                                    <td>52/50</td>
+                                    <td><i class="fa-solid fa-caret-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="img/bacon.png" alt="Bacon" class="item-image">
+                                            <span>Bacon</span>
+                                        </div>
+                                    </td>
+                                    <td>Meat</td>
+                                    <td>$0.00</td>
+                                    <td>20/100</td>
+                                    <td><i class="fa-solid fa-caret-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="img/chicken.png" alt="Chicken" class="item-image">
+                                            <span>Chicken</span>
+                                        </div>
+                                    </td>
+                                    <td>Meat</td>
+                                    <td>$0.00</td>
+                                    <td>20/100</td>
+                                    <td><i class="fa-solid fa-caret-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="img/sausage.png" alt="Sausage" class="item-image">
+                                            <span>Sausage</span>
+                                        </div>
+                                    </td>
+                                    <td>Meat</td>
+                                    <td>$0.00</td>
+                                    <td>20/100</td>
+                                    <td><i class="fa-solid fa-caret-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="img/onion.png" alt="Onion" class="item-image">
+                                            <span>Onion</span>
+                                        </div>
+                                    </td>
+                                    <td>Vegetable</td>
+                                    <td>$0.00</td>
+                                    <td>20/100</td>
+                                    <td><i class="fa-solid fa-caret-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="img/olive.png" alt="Olive" class="item-image">
+                                            <span>Olive</span>
+                                        </div>
+                                    </td>
+                                    <td>Vegetable</td>
+                                    <td>$0.00</td>
+                                    <td>20/100</td>
+                                    <td><i class="fa-solid fa-caret-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="form-check-input"></td>
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <img src="img/mushroom.png" alt="Mushroom" class="item-image">
+                                            <span>Mushroom</span>
+                                        </div>
+                                    </td>
+                                    <td>Vegetable</td>
+                                    <td>$0.00</td>
+                                    <td>20/100</td>
+                                    <td><i class="fa-solid fa-caret-down"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="overview-panel">
+                        <h5 class="mb-3">Overview</h5>
+                        
+                        <div class="stat-card">
+                            <div class="text-muted">Topping Total</div>
+                            <div class="stat-value">36</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="text-muted">Product Reserved</div>
+                            <div class="stat-value">12</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="text-muted">Stock Issue</div>
+                            <div class="stat-value">1</div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const toggleBtn = document.querySelector('.toggle-sidebar');
+            if (window.innerWidth <= 991) {
+                if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
+                    sidebar.classList.remove('active');
+                }
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            const sidebar = document.getElementById('sidebar');
+            if (window.innerWidth > 991) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
